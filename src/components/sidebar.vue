@@ -50,7 +50,7 @@
       <button @click="toggleDark">
         <img src="/images/darkmood.svg " alt="" class="h-6 w-12" />
       </button>
-      <img src="/images/moon1.svg" alt="" class="w-[16px] h-[16px] mt-1" />
+      <!-- <img src="/images/moon1.svg" alt="" class="w-[16px] h-[16px] mt-1" /> -->
     </div>
   </div>
 </template>
