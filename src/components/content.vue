@@ -16,7 +16,7 @@
           class="absolute right-[30px] top-[15px] cursor-pointer sm:hidden"
           @click="handleClick"
         >
-          <img src="@/assets/images/eyeon.svg" alt="" />
+          <img src="images/eyeon.svg" alt="" />
         </button>
       </div>
       <!-- <div

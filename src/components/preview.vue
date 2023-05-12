@@ -19,7 +19,7 @@
         class="absolute right-[30px] top-[15px] cursor-pointer"
         @click="$emit('eyeToggle')"
       >
-        <img src="@/assets/images/eyeon.svg" alt="" />
+        <img src="images/eyeon.svg" alt="" />
       </button>
     </div>
     <div
