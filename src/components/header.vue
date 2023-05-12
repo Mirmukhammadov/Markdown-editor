@@ -6,10 +6,10 @@
           class="bg-[#35393F] py-[26px] px-[20px] hover:bg-[#E46643] ease-out duration-300"
           @click="toggleHamburger"
         >
-          <img src="images/hamburger.svg" alt="" />
+          <img src="/images/hamburger.svg" alt="" />
         </button>
         <img
-          src="images/MARKDOWN.svg"
+          src="/images/MARKDOWN.svg"
           alt="logo of MArkdown"
           class="md:my-7 md:ml-[24px] md:block hidden"
         />
