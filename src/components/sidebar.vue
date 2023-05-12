@@ -31,7 +31,7 @@
         />
         <button
           @click="$emit('display', file.Id)"
-          class="bg-none border-none text-[#FFFFFF] font-normal font-[15px] pl-[15px]"
+          class="bg-none border-none text-[#FFFFFF] font-[15px] pl-[15px]"
         >
           {{ file.name }}
         </button>
