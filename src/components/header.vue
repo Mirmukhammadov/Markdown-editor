@@ -6,10 +6,10 @@
           class="bg-[#35393F] py-[26px] px-[20px] hover:bg-[#E46643] ease-out duration-300"
           @click="toggleHamburger"
         >
-          <img src="../components/images/hamburger.svg" alt="" />
+          <img src="@/assets/images/hamburger.svg" alt="" />
         </button>
         <img
-          src="./images/MARKDOWN.svg"
+          src="@/assets/images/MARKDOWN.svg"
           alt="logo of MArkdown"
           class="md:my-7 md:ml-[24px] md:block hidden"
         />
@@ -20,7 +20,7 @@
 
       <div class="flex">
         <img
-          src="./images/Trash.svg"
+          src="@/assets/images/Trash.svg"
           alt="logo of trash"
           class="w-5 h-5 my-[30px] mr-[20px] cursor-pointer"
           @click="$emit('toggleDeleteModal')"
@@ -30,7 +30,7 @@
           @click="$emit('showSavedMessage')"
         >
           <img
-            src="./images/save.svg"
+            src="@/assets/images/save.svg"
             alt=""
             class="absolute w-[20px] h-[20px] left-[12px] right-0 top-[10px]"
           />

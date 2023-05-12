@@ -54,7 +54,6 @@ import Sidebar from "./components/sidebar.vue";
 import Content from "./components/content.vue";
 import deleteModal from "./components/deleteModal.vue";
 import savedMessageModal from "./components/savedMessageModal.vue";
-import test from "./components/test.vue";
 
 import { ref, computed } from "vue";
 import * as Vue from "vue";
