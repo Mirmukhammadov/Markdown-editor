@@ -41,7 +41,7 @@
         @input="getData"
       >
         <textarea
-          class="outline-none focus:outline-none resize-none h-screen w-[100%] bg-[#fff] dark:bg-[#151619] text-[#35393F] font-weight: font-normal size-[14px] leading-6"
+          class="outline-none focus:outline-none resize-none h-screen w-[100%] bg-[#fff] dark:bg-[#151619] dark:text-[#fff] text-[#35393F] font-weight: font-normal size-[14px] leading-6"
           name=""
           id=""
           :value="modelValue"
@@ -50,7 +50,7 @@
       </div>
 
       <div v-if="!editing">
-        <span class="text-[12px] pl-[10px]"
+        <span class="text-[12px] pl-[10px] text-[#fff]"
           >create document or select created one)) go</span
         >
       </div>
@@ -95,7 +95,6 @@ const props = defineProps(["hamburgerOn", "modelValue", "editing"]);
 
 const handleClick = () => {
   eyeon.value = !eyeon.value;
-  console.log(props.modalValue, "content");
 };
 
 const emits = defineEmits(["update:modelValue"]);

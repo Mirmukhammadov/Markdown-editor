@@ -75,11 +75,8 @@ function display(id) {
       fileID.value = id;
       fileContent.value = file.content;
       editing.value = true;
-      console.log(fileContent.value);
-      console.log(file.content);
     }
   });
-  console.log(fileContent.value);
 }
 
 function toggleHamburger() {
@@ -90,28 +87,10 @@ function toggleDeleteModal() {
   showDeleteModal.value = !showDeleteModal.value;
 }
 
-// const createNewFile = () => {
-//   fileName.value = `new_file_${Date.now()}.md`;
-//   fileContent.value = "";
-//   files.push(fileName.value);
-//   editing.value = true;
-// };
-
-// const saveFile = () => {
-//   const fileBlob = new Blob([fileContent.value], { type: "text/markdown" });
-//   const fileUrl = URL.createObjectURL(fileBlob);
-//   const downloadLink = document.createElement("a");
-//   downloadLink.href = fileUrl;
-//   downloadLink.download = fileName.value;
-//   downloadLink.click();
-// };
-
 const createNewFile = () => {
   fileName.value = `${Date.now()}.md`;
   fileContent.value = "";
   fileId.value = Date.now();
-  console.log(fileName, fileContent);
-
   const newFile = {
     name: fileName.value,
     content: fileContent.value,
@@ -123,21 +102,9 @@ const createNewFile = () => {
   filess.value = JSON.parse(localStorage.getItem("array"));
 
   Vue.set(filess.value, filess.value.length, newFile);
-  console.log(filess.value);
 
   return { fileName, fileContent };
 };
-
-// const { fileName } = createNewFile();
-// const saveFile = () => {
-//   const newFile = {
-//     name: fileName,
-//     content: fileContent.value,
-//     Id: fileId.value,
-//   };
-//   files.push(newFile);
-//   console.log(files);
-// };
 
 function showSavedMessage() {
   showSavedMessageValue.value = true;
@@ -157,23 +124,13 @@ function showSavedMessage() {
 
   if (matchingFile) {
     matchingFile.content = fileContent.value;
-    console.log(fileContent.value);
-    console.log(matchingFile.content);
-    console.log(matchingFile);
-    console.log(fileID.value);
-    console.log(indeX);
-
     arr.splice(indeX, 1, matchingFile);
-    // const newArr = [...files, matchingFile];
-
-    // fileContent.value = matchingFile.content; // Update the fileContent value as well
     editing.value = true;
     localStorage.setItem("array", JSON.stringify(arr));
   }
 }
 
 const downloadFile = () => {
-  console.log("bosildi");
   const fileBlob = new Blob([fileContent.value], { type: "text/markdown" });
   const fileUrl = URL.createObjectURL(fileBlob);
   const downloadLink = document.createElement("a");
@@ -185,10 +142,7 @@ const downloadFile = () => {
 
 function deleteObject() {
   let array = JSON.parse(localStorage.getItem("array"));
-  console.log(array);
-
   array = array.filter((file) => file.Id != fileID.value);
-
   localStorage.setItem("array", JSON.stringify(array));
   showDeleteModal.value = false;
 }

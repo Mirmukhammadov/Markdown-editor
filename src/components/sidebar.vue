@@ -88,7 +88,6 @@ function toggleDark() {
   darkon.value = !darkon.value;
   localStorage.setItem("darkmode", darkon.value);
   const darkonvalue = localStorage.getItem("darkmode");
-  console.log(typeof darkonvalue, "darkonvalue");
 
   if (darkonvalue === "true") {
     document.body.classList.add("dark");
@@ -96,14 +95,4 @@ function toggleDark() {
     document.body.classList.remove("dark");
   }
 }
-
-// function display(id) {
-//   filess.forEach((file) => {
-//     if (file.Id == id) {
-//       props.fileContent = file.content;
-//       console.log("yaho");
-//     }
-//   });
-//   // console.log(file.name);
-// }
 </script>

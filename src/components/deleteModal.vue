@@ -14,7 +14,6 @@
     </p>
     <Cbutton
       class="md:px-[80px] px-[20px] mt-5 py-[10px] text-center mx-auto justify-center"
-      v-if="fileID"
       @click="$emit('deleteObject')"
       >Confirm & Delete</Cbutton
     >
@@ -25,17 +24,10 @@
 import Cbutton from "./button.vue";
 import { ref } from "vue";
 const props = defineProps(["showDeleteModal", "toggleDeleteModal", "fileID"]);
-console.log(props.fileID, "delete");
-
-console.log(props.toggleDeleteModal);
 
 function deleteObject() {
   let array = JSON.parse(localStorage.getItem("array"));
-  console.log(array);
-
   array = array.filter((file) => file.Id != props.fileID);
-
   localStorage.setItem("array", JSON.stringify(array));
-  console.log("bosildi");
 }
 </script>
